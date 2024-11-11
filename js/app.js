@@ -8627,7 +8627,6 @@
                     swiper = new swiper_core_Swiper(".blog__slider", config);
                 }
                 initSwiper();
-                window.addEventListener("resize", initSwiper);
             }
             if (document.querySelector(".statistics__slider")) new swiper_core_Swiper(".statistics__slider", {
                 modules: [ Navigation ],
@@ -9929,10 +9928,14 @@
         document.querySelectorAll("[data-dropdown-hover]").forEach((function(dropDownWrapper) {
             const dropDownBtn = dropDownWrapper.querySelector("[data-dropdown-button]");
             const dropDownList = dropDownWrapper.querySelector("[data-dropdown-list]");
-            dropDownWrapper.querySelector("[data-dropdown-input]");
-            dropDownBtn.addEventListener("mouseenter", (function(e) {
-                dropDownList.classList.add("visible");
-                this.classList.add("active");
+            dropDownBtn.addEventListener("click", (function() {
+                if (dropDownList.classList.contains("visible")) {
+                    dropDownList.classList.remove("visible");
+                    this.classList.remove("active");
+                } else {
+                    dropDownList.classList.add("visible");
+                    this.classList.add("active");
+                }
             }));
             document.addEventListener("keydown", (function(e) {
                 if (e.key === "Tab" || e.key === "Escape") {
@@ -9980,6 +9983,8 @@
             }
             var pageServicesElement = document.querySelector(".bg-dark");
             if (pageServicesElement) document.documentElement.classList.add("bg-dark");
+            var pageBgLight = document.querySelector(".bg-light");
+            if (pageBgLight) document.documentElement.classList.add("bg-light");
         }));
         const menuList = document.querySelector(".menu__list");
         if (menuList) if (window.innerWidth > 991.98) {
