@@ -8582,7 +8582,7 @@
                         modules: [ Navigation ],
                         observer: true,
                         observeParents: true,
-                        speed: 800,
+                        speed: 350,
                         loop: true,
                         grabCursor: true,
                         centeredSlides: true,
@@ -8688,6 +8688,48 @@
                     992: {
                         slidesPerView: 2,
                         spaceBetween: 26
+                    }
+                },
+                on: {}
+            });
+            if (document.querySelector(".gallery__slider")) new swiper_core_Swiper(".gallery__slider", {
+                modules: [ Navigation, Mousewheel, freeMode ],
+                observer: true,
+                observeParents: true,
+                speed: 800,
+                loop: true,
+                initialSlide: 1,
+                freeMode: {
+                    enabled: true,
+                    sticky: false,
+                    momentumBounce: false
+                },
+                mousewheel: {
+                    enabled: true,
+                    sensitivity: .3,
+                    forceToAxis: true
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next"
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 16,
+                        freeMode: {
+                            enabled: true,
+                            sticky: true,
+                            momentumBounce: false
+                        }
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 40
+                    },
+                    992: {
+                        slidesPerView: 1,
+                        spaceBetween: 40
                     }
                 },
                 on: {}
@@ -9985,6 +10027,8 @@
             if (pageServicesElement) document.documentElement.classList.add("bg-dark");
             var pageBgLight = document.querySelector(".bg-light");
             if (pageBgLight) document.documentElement.classList.add("bg-light");
+            pageBgLight = document.querySelector(".bg-mod");
+            if (pageBgLight) document.documentElement.classList.add("bg-mod");
         }));
         const menuList = document.querySelector(".menu__list");
         if (menuList) if (window.innerWidth > 991.98) {
@@ -10006,6 +10050,73 @@
                 }));
             }));
         }
+        window.addEventListener("load", (() => {
+            const formLabelUploadInput = document.querySelector(".form__label--upload-input");
+            const formLabelUpload = document.querySelector(".form__label--upload");
+            const uploadWrapper = document.querySelector(".file-upload__wrapper");
+            const errorHideDiv = document.querySelector(".file-upload__error");
+            const errorHideDivType = document.querySelector(".file-upload__error--type");
+            if (formLabelUploadInput) {
+                formLabelUpload.addEventListener("dragover", (e => {
+                    e.preventDefault();
+                }));
+                formLabelUpload.addEventListener("drop", (e => {
+                    e.preventDefault();
+                    const files = e.dataTransfer.files;
+                    handleFiles(files);
+                }));
+                formLabelUploadInput.addEventListener("change", (e => {
+                    const files = e.target.files;
+                    handleFiles(files);
+                }));
+                const handleFiles = files => {
+                    uploadWrapper.innerHTML = "";
+                    let limitedFiles = [ ...files ].slice(0, 5);
+                    if (files.length > 5) displayError(); else removeError();
+                    for (let i = 0; i < limitedFiles.length; i++) {
+                        const fileType = limitedFiles[i].name.split(".").pop().toLowerCase();
+                        const fileName = limitedFiles[i].name;
+                        if (!isSupported(fileType)) {
+                            displayErrorType();
+                            break;
+                        } else {
+                            fileshow(fileName);
+                            removeErrorType();
+                        }
+                    }
+                };
+                const isSupported = fileType => {
+                    const allowedTypes = [ "jpg", "jpeg", "png", "pdf" ];
+                    return allowedTypes.includes(fileType);
+                };
+                const fileshow = fileName => {
+                    const uploadWrapperBox = document.createElement("div");
+                    uploadWrapperBox.classList.add("file-upload__inner");
+                    const uploadWrapperFile = document.createElement("p");
+                    uploadWrapperFile.classList.add("file-upload__file--name");
+                    uploadWrapperFile.textContent = fileName;
+                    const uploadWrapperDel = document.createElement("button");
+                    uploadWrapperDel.classList.add("file-upload__del");
+                    uploadWrapper.append(uploadWrapperBox);
+                    uploadWrapperBox.append(uploadWrapperFile, uploadWrapperDel);
+                    uploadWrapperDel.addEventListener("click", (() => {
+                        uploadWrapper.removeChild(uploadWrapperBox);
+                    }));
+                };
+                const displayError = () => {
+                    errorHideDiv.removeAttribute("hidden");
+                };
+                const displayErrorType = () => {
+                    errorHideDivType.removeAttribute("hidden");
+                };
+                const removeError = () => {
+                    errorHideDiv.setAttribute("hidden", true);
+                };
+                const removeErrorType = () => {
+                    errorHideDivType.setAttribute("hidden", true);
+                };
+            }
+        }));
         window["FLS"] = false;
         menuInit();
         spollers();
