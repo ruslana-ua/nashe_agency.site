@@ -8582,7 +8582,7 @@
                         modules: [ Navigation ],
                         observer: true,
                         observeParents: true,
-                        speed: 350,
+                        speed: 400,
                         loop: true,
                         grabCursor: true,
                         centeredSlides: true,
@@ -8606,8 +8606,8 @@
                         config.effect = "coverflow";
                         config.coverflowEffect = {
                             rotate: 0,
-                            stretch: windowWidth >= 992 ? 320 : 290,
-                            depth: -221,
+                            stretch: 250,
+                            depth: 0,
                             scale: .445,
                             modifier: 1,
                             slideShadows: false
@@ -8697,7 +8697,6 @@
                 observer: true,
                 observeParents: true,
                 speed: 800,
-                loop: true,
                 initialSlide: 1,
                 freeMode: {
                     enabled: true,
