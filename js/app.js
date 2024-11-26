@@ -10225,6 +10225,17 @@
                 animLinks.forEach((animLink => animLink.addEventListener("mouseleave", animateit)));
             }
         }
+        const projectsMainBbody = document.querySelector(".projects-main__body");
+        if (projectsMainBbody) document.querySelectorAll(".projects-main__link").forEach((function(link) {
+            const image = link.querySelector(".projects-main__image");
+            const button = link.querySelector(".projects-main__button");
+            image.addEventListener("mouseenter", (function() {
+                button.classList.add("hover");
+            }));
+            image.addEventListener("mouseleave", (function() {
+                button.classList.remove("hover");
+            }));
+        }));
         window["FLS"] = false;
         menuInit();
         spollers();

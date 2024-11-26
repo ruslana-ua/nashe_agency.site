@@ -10021,8 +10021,8 @@ body::after {
 .career__bg img {
   position: absolute;
   width: 254%;
-  height: 297%;
-  top: -117%;
+  height: 298%;
+  top: -118%;
   left: -113%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -11518,6 +11518,7 @@ body::after {
 }
 .projects-main__title--top {
   text-align: center;
+  pointer-events: none;
   position: relative;
   z-index: 2
 }
@@ -11580,6 +11581,9 @@ body::after {
 }
 .projects-main__button {
   padding: 0 0 16px 0
+}
+.projects-main__button.hover::before {
+  margin-right: 10px
 }
 @media(max-width:61.99875em) {
   .projects-main__button {
