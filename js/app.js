@@ -10236,6 +10236,25 @@
                 button.classList.remove("hover");
             }));
         }));
+        const searchInputs = document.querySelectorAll(".search__input");
+        if (searchInputs) searchInputs.forEach((searchInput => {
+            const clearInputBtn = searchInput.closest(".search__form").querySelector(".search__clear");
+            if (searchInput && clearInputBtn) {
+                function clearInput() {
+                    searchInput.value = "";
+                    clearInputBtn.classList.remove("visible");
+                }
+                function updateClearButtonVisibility() {
+                    const inputValue = searchInput.value.trim();
+                    if (inputValue) clearInputBtn.classList.add("visible"); else clearInputBtn.classList.remove("visible");
+                }
+                searchInput.addEventListener("input", updateClearButtonVisibility);
+                searchInput.addEventListener("keydown", (event => {
+                    if (event.key === "Backspace") setTimeout(updateClearButtonVisibility, 0);
+                }));
+                clearInputBtn.addEventListener("click", clearInput);
+            }
+        }));
         window["FLS"] = false;
         menuInit();
         spollers();
