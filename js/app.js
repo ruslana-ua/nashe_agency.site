@@ -4144,10 +4144,10 @@
             if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
         };
         let bodyLockStatus = true;
-        let bodyLockToggle = (delay = 500) => {
+        let bodyLockToggle = (delay = 100) => {
             if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
         };
-        let bodyUnlock = (delay = 500) => {
+        let bodyUnlock = (delay = 100) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
                 setTimeout((() => {
@@ -4163,7 +4163,7 @@
                 }), delay);
             }
         };
-        let bodyLock = (delay = 500) => {
+        let bodyLock = (delay = 100) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
                 const lockPaddingValue = window.innerWidth - document.body.offsetWidth + "px";
@@ -8594,7 +8594,8 @@
                         },
                         breakpoints: {
                             0: {
-                                slidesPerView: 1.035
+                                slidesPerView: 1.035,
+                                speed: 800
                             },
                             768: {
                                 slidesPerView: "auto"
@@ -8627,6 +8628,7 @@
                     swiper = new swiper_core_Swiper(".blog__slider", config);
                 }
                 initSwiper();
+                window.addEventListener("resize", initSwiper);
             }
             if (document.querySelector(".statistics__slider")) new swiper_core_Swiper(".statistics__slider", {
                 modules: [ Navigation ],
