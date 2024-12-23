@@ -8979,8 +8979,8 @@
                         spaceBetween: 12
                     },
                     550: {
-                        slidesPerView: 2.175,
-                        spaceBetween: 12
+                        slidesPerView: 2.1,
+                        spaceBetween: 14
                     },
                     992: {
                         slidesPerView: 3,
@@ -9017,8 +9017,8 @@
                         }
                     },
                     550: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 20
+                        slidesPerView: 1.47,
+                        spaceBetween: 18
                     },
                     992: {
                         slidesPerView: 2,

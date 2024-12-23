@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241218183048">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241223192431">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -195,7 +195,12 @@
 						</div>
 					</div>
 					<div class="page-reviews__image">
-						<img src="img/bg/bg-24.webp" alt="">
+						<picture>
+							<source media="(max-width: 767.98px)" srcset="img/bg/bg-24-mob.webp" />
+							<source media="(max-width: 991.98px)" srcset="img/bg/bg-24-tab.webp" />
+							<source media="(min-width: 991.98px)" srcset="img/bg/bg-24.webp" />
+							<img src="img/bg/bg-24.webp" alt="" />
+						</picture>
 					</div>
 				</div>
 			</section>
@@ -217,6 +222,11 @@
 											</div>
 										</div>
 										<div class="main-reviews__date text-l">01 грудня 2025</div>
+									</div>
+									<div class="main-reviews__tags-tab tags text-m">
+										<a href="" class="tags__link green">дизайн</a>
+										<a href="" class="tags__link violet">розробка</a>
+										<a href="" class="tags__link yellow">реклама</a>
 									</div>
 									<div class="main-reviews__block">
 										<div class="main-reviews__title h5">Запуск онлайн бізнесу з нуля</div>
@@ -249,46 +259,48 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-reviews__item main-reviews__item--mod">
-							<div class="main-reviews__content">
-								<div class="main-reviews__top">
-									<div class="main-reviews__row">
-										<div class="main-reviews__rating rating-reviews">
-											<div class="rating-reviews__text text-xl">5.0</div>
-											<div class="rating-reviews__wrap">
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon  _icon-star"></div>
+						<div data-simplebar='rtl' class="main-reviews__bar">
+							<div class="main-reviews__item main-reviews__item--mod">
+								<div class="main-reviews__content">
+									<div class="main-reviews__top">
+										<div class="main-reviews__row">
+											<div class="main-reviews__rating rating-reviews">
+												<div class="rating-reviews__text text-xl">5.0</div>
+												<div class="rating-reviews__wrap">
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon  _icon-star"></div>
+												</div>
 											</div>
+											<div class="main-reviews__date text-l">01 грудня 2025</div>
 										</div>
-										<div class="main-reviews__date text-l">01 грудня 2025</div>
+										<div class="main-reviews__block">
+											<div class="main-reviews__title h5">Маркетплейс з нуля</div>
+											<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+										</div>
 									</div>
-									<div class="main-reviews__block">
-										<div class="main-reviews__title h5">Маркетплейс з нуля</div>
-										<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+									<div class="main-reviews__bottom reviews__bottom">
+										<div class="reviews__avatar lazy_image">
+											<img data-src="img/reviews/avatar-03.webp" alt="">
+										</div>
+										<div class="reviews__block">
+											<div class="reviews__name text-l">Олег Шевченко</div>
+											<div class="reviews__descr">Сo-Founder Google</div>
+										</div>
 									</div>
 								</div>
-								<div class="main-reviews__bottom reviews__bottom">
-									<div class="reviews__avatar lazy_image">
-										<img data-src="img/reviews/avatar-03.webp" alt="">
+								<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
+									<div class="video__youtube">
+										<div class="video__image lazy_image">
+											<img data-src="img/reviews/avatar-02.webp" alt="">
+										</div>
+										<button type="button" class="video__button _icon-play">
+										</button>
 									</div>
-									<div class="reviews__block">
-										<div class="reviews__name text-l">Олег Шевченко</div>
-										<div class="reviews__descr">Сo-Founder Google</div>
-									</div>
-								</div>
+								</a>
 							</div>
-							<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
-								<div class="video__youtube">
-									<div class="video__image lazy_image">
-										<img data-src="img/reviews/avatar-02.webp" alt="">
-									</div>
-									<button type="button" class="video__button _icon-play">
-									</button>
-								</div>
-							</a>
 						</div>
 						<div class="main-reviews__item">
 							<div class="main-reviews__content">
@@ -305,6 +317,11 @@
 											</div>
 										</div>
 										<div class="main-reviews__date text-l">01 грудня 2025</div>
+									</div>
+									<div class="main-reviews__tags-tab tags text-m">
+										<a href="" class="tags__link light">Супровід</a>
+										<a href="" class="tags__link red">Продакшн</a>
+										<a href="" class="tags__link violet">Розробка</a>
 									</div>
 									<div class="main-reviews__block">
 										<div class="main-reviews__title h5">Запуск онлайн бізнесу з нуля</div>
@@ -333,46 +350,48 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-reviews__item main-reviews__item--mod main-reviews__item--rev">
-							<div class="main-reviews__content">
-								<div class="main-reviews__top">
-									<div class="main-reviews__row">
-										<div class="main-reviews__rating rating-reviews">
-											<div class="rating-reviews__text text-xl">5.0</div>
-											<div class="rating-reviews__wrap">
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon  _icon-star"></div>
+						<div data-simplebar='rtl' class="main-reviews__bar">
+							<div class="main-reviews__item main-reviews__item--mod main-reviews__item--rev">
+								<div class="main-reviews__content">
+									<div class="main-reviews__top">
+										<div class="main-reviews__row">
+											<div class="main-reviews__rating rating-reviews">
+												<div class="rating-reviews__text text-xl">5.0</div>
+												<div class="rating-reviews__wrap">
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon  _icon-star"></div>
+												</div>
 											</div>
+											<div class="main-reviews__date text-l">01 грудня 2025</div>
 										</div>
-										<div class="main-reviews__date text-l">01 грудня 2025</div>
+										<div class="main-reviews__block">
+											<div class="main-reviews__title h5">Маркетплейс з нуля</div>
+											<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+										</div>
 									</div>
-									<div class="main-reviews__block">
-										<div class="main-reviews__title h5">Маркетплейс з нуля</div>
-										<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+									<div class="main-reviews__bottom reviews__bottom">
+										<div class="reviews__avatar lazy_image">
+											<img data-src="img/reviews/avatar-05.webp" alt="">
+										</div>
+										<div class="reviews__block">
+											<div class="reviews__name text-l">Олег Шевченко</div>
+											<div class="reviews__descr">Сo-Founder Google</div>
+										</div>
 									</div>
 								</div>
-								<div class="main-reviews__bottom reviews__bottom">
-									<div class="reviews__avatar lazy_image">
-										<img data-src="img/reviews/avatar-05.webp" alt="">
+								<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
+									<div class="video__youtube">
+										<div class="video__image lazy_image">
+											<img data-src="img/reviews/avatar-04.webp" alt="">
+										</div>
+										<button type="button" class="video__button _icon-play">
+										</button>
 									</div>
-									<div class="reviews__block">
-										<div class="reviews__name text-l">Олег Шевченко</div>
-										<div class="reviews__descr">Сo-Founder Google</div>
-									</div>
-								</div>
+								</a>
 							</div>
-							<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
-								<div class="video__youtube">
-									<div class="video__image lazy_image">
-										<img data-src="img/reviews/avatar-04.webp" alt="">
-									</div>
-									<button type="button" class="video__button _icon-play">
-									</button>
-								</div>
-							</a>
 						</div>
 						<div class="main-reviews__item">
 							<div class="main-reviews__content">
@@ -389,6 +408,10 @@
 											</div>
 										</div>
 										<div class="main-reviews__date text-l">01 грудня 2025</div>
+									</div>
+									<div class="main-reviews__tags-tab tags text-m">
+										<a href="" class="tags__link green">дизайн</a>
+										<a href="" class="tags__link red">Продакшн</a>
 									</div>
 									<div class="main-reviews__block">
 										<div class="main-reviews__title h5">Запуск онлайн бізнесу з нуля</div>
@@ -429,6 +452,11 @@
 											</div>
 										</div>
 										<div class="main-reviews__date text-l">01 грудня 2025</div>
+									</div>
+									<div class="main-reviews__tags-tab tags text-m">
+										<a href="" class="tags__link green">дизайн</a>
+										<a href="" class="tags__link violet">розробка</a>
+										<a href="" class="tags__link yellow">реклама</a>
 									</div>
 									<div class="main-reviews__block">
 										<div class="main-reviews__title h5">Запуск онлайн бізнесу з нуля</div>
@@ -477,6 +505,11 @@
 										</div>
 										<div class="main-reviews__date text-l">01 грудня 2025</div>
 									</div>
+									<div class="main-reviews__tags-tab tags text-m">
+										<a href="" class="tags__link light">Супровід</a>
+										<a href="" class="tags__link red">Продакшн</a>
+										<a href="" class="tags__link violet">Розробка</a>
+									</div>
 									<div class="main-reviews__block">
 										<div class="main-reviews__title h5">Запуск онлайн бізнесу з нуля</div>
 										<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
@@ -504,46 +537,48 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-reviews__item main-reviews__item--mod">
-							<div class="main-reviews__content">
-								<div class="main-reviews__top">
-									<div class="main-reviews__row">
-										<div class="main-reviews__rating rating-reviews">
-											<div class="rating-reviews__text text-xl">5.0</div>
-											<div class="rating-reviews__wrap">
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon _icon-star"></div>
-												<div class="rating-reviews__icon  _icon-star"></div>
+						<div data-simplebar='rtl' class="main-reviews__bar">
+							<div class="main-reviews__item main-reviews__item--mod">
+								<div class="main-reviews__content">
+									<div class="main-reviews__top">
+										<div class="main-reviews__row">
+											<div class="main-reviews__rating rating-reviews">
+												<div class="rating-reviews__text text-xl">5.0</div>
+												<div class="rating-reviews__wrap">
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon _icon-star"></div>
+													<div class="rating-reviews__icon  _icon-star"></div>
+												</div>
 											</div>
+											<div class="main-reviews__date text-l">01 грудня 2025</div>
 										</div>
-										<div class="main-reviews__date text-l">01 грудня 2025</div>
+										<div class="main-reviews__block">
+											<div class="main-reviews__title h5">Маркетплейс з нуля</div>
+											<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+										</div>
 									</div>
-									<div class="main-reviews__block">
-										<div class="main-reviews__title h5">Маркетплейс з нуля</div>
-										<div class="main-reviews__text text-l">Співпраця з цією студією була просто неймовірною! Команда продемонструвала високий рівень професіоналізму та креативного підходу до нашого проєкту. Вони швидко зрозуміли наші потреби й реалізували всі ідеї на найвищому рівні. Результат перевершив наші очікування – сайт виглядає сучасно, стильно та функціонально. </div>
+									<div class="main-reviews__bottom reviews__bottom">
+										<div class="reviews__avatar lazy_image">
+											<img data-src="img/reviews/avatar-03.webp" alt="">
+										</div>
+										<div class="reviews__block">
+											<div class="reviews__name text-l">Олег Шевченко</div>
+											<div class="reviews__descr">Сo-Founder Google</div>
+										</div>
 									</div>
 								</div>
-								<div class="main-reviews__bottom reviews__bottom">
-									<div class="reviews__avatar lazy_image">
-										<img data-src="img/reviews/avatar-03.webp" alt="">
+								<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
+									<div class="video__youtube">
+										<div class="video__image lazy_image">
+											<img data-src="img/reviews/avatar-06.webp" alt="">
+										</div>
+										<button type="button" class="video__button _icon-play">
+										</button>
 									</div>
-									<div class="reviews__block">
-										<div class="reviews__name text-l">Олег Шевченко</div>
-										<div class="reviews__descr">Сo-Founder Google</div>
-									</div>
-								</div>
+								</a>
 							</div>
-							<a href="https://www.youtube.com/" target="_blank" class="main-reviews__video reviews__slide video">
-								<div class="video__youtube">
-									<div class="video__image lazy_image">
-										<img data-src="img/reviews/avatar-06.webp" alt="">
-									</div>
-									<button type="button" class="video__button _icon-play">
-									</button>
-								</div>
-							</a>
 						</div>
 					</div>
 				</div>
@@ -566,7 +601,7 @@
 							<li class="pagination__list">
 								<a href="" class="pagination__link">9</a>
 							</li>
-							<li class="pagination__list">
+							<li class="pagination__list mob">
 								<a href="" class="pagination__link">10</a>
 							</li>
 							<a href="" class="pagination__button pagination__button--next _icon-arrow_btn"></a>
@@ -666,28 +701,28 @@
 			<div class="footer__body">
 				<div class="footer__container">
 					<div class="footer__tags tags text-m">
-						<a href="" class="tags__text light">Арбитраж</a>
-						<a href="" class="tags__text green">Instagram</a>
-						<a href="" class="tags__text yellow">Тизерные сети</a>
-						<a href="" class="tags__text yellow">TikTok</a>
-						<a href="" class="tags__text green">SEO</a>
-						<a href="" class="tags__text yellow">Google</a>
-						<a href="" class="tags__text violet">Telegram</a>
-						<a href="" class="tags__text yellow">Facebook</a>
-						<a href="" class="tags__text green">TikTok</a>
-						<a href="" class="tags__text yellow">Facebook</a>
-						<a href="" class="tags__text green">Арбитраж</a>
-						<a href="" class="tags__text yellow">SEO</a>
-						<a href="" class="tags__text green">Google</a>
-						<a href="" class="tags__text yellow">Тизерные сети</a>
-						<a href="" class="tags__text violet">Приложения</a>
-						<a href="" class="tags__text violet">Маркетплейсы</a>
-						<a href="" class="tags__text violet">Сайты</a>
-						<a href="" class="tags__text violet">ПО</a>
-						<a href="" class="tags__text violet">Ігри</a>
-						<a href="" class="tags__text red">Монтаж</a>
-						<a href="" class="tags__text red">Фотоз'ємка</a>
-						<a href="" class="tags__text red">Аэросъемка</a>
+						<a href="" class="tags__link light">Арбитраж</a>
+						<a href="" class="tags__link green">Instagram</a>
+						<a href="" class="tags__link yellow">Тизерные сети</a>
+						<a href="" class="tags__link yellow">TikTok</a>
+						<a href="" class="tags__link green">SEO</a>
+						<a href="" class="tags__link yellow">Google</a>
+						<a href="" class="tags__link violet">Telegram</a>
+						<a href="" class="tags__link yellow">Facebook</a>
+						<a href="" class="tags__link green">TikTok</a>
+						<a href="" class="tags__link yellow">Facebook</a>
+						<a href="" class="tags__link green">Арбитраж</a>
+						<a href="" class="tags__link yellow">SEO</a>
+						<a href="" class="tags__link green">Google</a>
+						<a href="" class="tags__link yellow">Тизерные сети</a>
+						<a href="" class="tags__link violet">Приложения</a>
+						<a href="" class="tags__link violet">Маркетплейсы</a>
+						<a href="" class="tags__link violet">Сайты</a>
+						<a href="" class="tags__link violet">ПО</a>
+						<a href="" class="tags__link violet">Ігри</a>
+						<a href="" class="tags__link red">Монтаж</a>
+						<a href="" class="tags__link red">Фотоз'ємка</a>
+						<a href="" class="tags__link red">Аэросъемка</a>
 					</div>
 					<div class="footer__content content-footer">
 						<div data-simplebar class="content-footer__wrapper">
@@ -973,28 +1008,28 @@
 								</div>
 							</div>
 							<div class="popup-search__tags--bottom tags text-m">
-								<a href="" class="tags__text light">Арбитраж</a>
-								<a href="" class="tags__text green">Instagram</a>
-								<a href="" class="tags__text yellow">Тизерные сети</a>
-								<a href="" class="tags__text yellow">TikTok</a>
-								<a href="" class="tags__text green">SEO</a>
-								<a href="" class="tags__text yellow">Google</a>
-								<a href="" class="tags__text violet">Telegram</a>
-								<a href="" class="tags__text yellow">Facebook</a>
-								<a href="" class="tags__text green">TikTok</a>
-								<a href="" class="tags__text yellow">Facebook</a>
-								<a href="" class="tags__text green">Арбитраж</a>
-								<a href="" class="tags__text yellow">SEO</a>
-								<a href="" class="tags__text green">Google</a>
-								<a href="" class="tags__text yellow">Тизерные сети</a>
-								<a href="" class="tags__text violet">Приложения</a>
-								<a href="" class="tags__text violet">Маркетплейсы</a>
-								<a href="" class="tags__text violet">Сайты</a>
-								<a href="" class="tags__text violet">ПО</a>
-								<a href="" class="tags__text violet">Ігри</a>
-								<a href="" class="tags__text red">Монтаж</a>
-								<a href="" class="tags__text red">Фотоз'ємка</a>
-								<a href="" class="tags__text red">Аэросъемка</a>
+								<a href="" class="tags__link light">Арбитраж</a>
+								<a href="" class="tags__link green">Instagram</a>
+								<a href="" class="tags__link yellow">Тизерные сети</a>
+								<a href="" class="tags__link yellow">TikTok</a>
+								<a href="" class="tags__link green">SEO</a>
+								<a href="" class="tags__link yellow">Google</a>
+								<a href="" class="tags__link violet">Telegram</a>
+								<a href="" class="tags__link yellow">Facebook</a>
+								<a href="" class="tags__link green">TikTok</a>
+								<a href="" class="tags__link yellow">Facebook</a>
+								<a href="" class="tags__link green">Арбитраж</a>
+								<a href="" class="tags__link yellow">SEO</a>
+								<a href="" class="tags__link green">Google</a>
+								<a href="" class="tags__link yellow">Тизерные сети</a>
+								<a href="" class="tags__link violet">Приложения</a>
+								<a href="" class="tags__link violet">Маркетплейсы</a>
+								<a href="" class="tags__link violet">Сайты</a>
+								<a href="" class="tags__link violet">ПО</a>
+								<a href="" class="tags__link violet">Ігри</a>
+								<a href="" class="tags__link red">Монтаж</a>
+								<a href="" class="tags__link red">Фотоз'ємка</a>
+								<a href="" class="tags__link red">Аэросъемка</a>
 							</div>
 						</div>
 						<div class="popup-search__bg lazy_image">
@@ -1005,7 +1040,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20241218183048"></script>
+	<script src="js/app.min.js?_v=20241223192431"></script>
 </body>
 
 </html>
